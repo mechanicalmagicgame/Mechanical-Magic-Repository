@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     private bool isDialogueActive = false;
 
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,8 @@ public class DialogueManager : MonoBehaviour
         nameTextBox.text = dialogue.name;
 
         isDialogueActive = true;
+
+        animator.SetBool("IsOpen", true);
 
         sentences.Clear();
 
@@ -61,6 +65,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         isDialogueActive = false;
-        Debug.Log("End of Conversation!");
+        //Debug.Log("End of Conversation!");
+        animator.SetBool("IsOpen", false);
     }
 }
