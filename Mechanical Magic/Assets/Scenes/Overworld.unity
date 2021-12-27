@@ -1032,16 +1032,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 745319908}
   offset: {x: 0, y: 0, z: -10}
-<<<<<<< Updated upstream
   xDiff: 2.5
   yDiff: 5
   smoothFactor: 20
-=======
-  xDiff: 5
-  yDiff: 2.5
-  smoothFactor: 90
-  camSpeed: 20
->>>>>>> Stashed changes
 --- !u!1 &1872034510
 GameObject:
   m_ObjectHideFlags: 0
