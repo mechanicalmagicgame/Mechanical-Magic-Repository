@@ -9,6 +9,8 @@ public class CameraFollow : MonoBehaviour
     public float xDiff, yDiff;
     [Range(1,100)]
     public float smoothFactor;
+    [Range(1, 100)]
+    public float camSpeed;
 
     private float targetXPos, targetYPos, camXPos, camYPos;
 
@@ -28,7 +30,7 @@ public class CameraFollow : MonoBehaviour
         if((Mathf.Abs(camXPos - targetXPos) > xDiff) || (Mathf.Abs(camYPos - targetYPos) > yDiff))
         {
             Vector3 targetPosition = target.position + offset;
-            Vector3 smoothPosition = Vector3.Lerp(transform.position, targetPosition, (smoothFactor / 10) * Time.fixedDeltaTime);
+            Vector3 smoothPosition = Vector3.Lerp(transform.position, targetPosition, ((100 - smoothFactor) / 10) * Time.fixedDeltaTime * (camSpeed/10));
             transform.position = smoothPosition;
         }
     }

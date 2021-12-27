@@ -13,6 +13,9 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
+    public float timePerChar;
+    private float timer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +25,20 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+        //Next/ Continue dialoogue trigger
         if (Input.GetKeyDown(KeyCode.X) && (isDialogueActive))
         {
             DisplayNextSentence();
+        }
+
+
+        if(dialogueTextBox != null)
+        {
+            timer -= Time.deltaTime;
+            if(timer <= 0)
+            {
+                timer += timePerChar;
+            }
         }
     }
 
@@ -67,5 +81,10 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = false;
         //Debug.Log("End of Conversation!");
         animator.SetBool("IsOpen", false);
+    }
+
+    public void Writer(string sentence, float timePerChar)
+    {
+        
     }
 }
