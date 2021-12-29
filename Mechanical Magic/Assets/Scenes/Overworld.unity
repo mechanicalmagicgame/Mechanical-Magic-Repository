@@ -555,18 +555,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactRange: 1
   dialogue:
-    name: Placeholder NPC
+    name: Just a circle
     sentences:
     - Hi!
-    - I'm Placeholder!
-    - I'm a descedent from a long line of placeholders, and I'm here to help you
-      out with your Journey. I am honored to be an example that is being used to
-      display all these great features Prathmesh has worked so hard on :). Isn't
-      he a great dev?! Well, now I'm just rambling so that Prathmesh can preview
-      his speed up dialogue feature. I hope this is enough dialogue for him. Blah...
-      Blah... Blah... Blah....
-    - That's all I have to offer for now! I'll see you later!
-    - Byee!! Have a nice day!!
+    - I'm Just a circle!
+    - I think my friend is looking for you.
+    - He's down there to your left. He almost looks like me. But not as good as me
+      ofcourse.
+    - Also, I heard a rumor he might just be a temp sprite. Imagine being a temp.
+      I dont know how I would live if I ever found out that I was a temp.
+    - Anyways, I won't hold you any longer. Go on with your journey.
+    - Bye!
 --- !u!212 &847828626
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -608,7 +607,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: e49aa15fb904a44698774388d31246d2, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.9515679, a: 1}
+  m_Color: {r: 1, g: 0.98120654, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -643,6 +642,7 @@ GameObject:
   - component: {fileID: 898131177}
   - component: {fileID: 898131176}
   - component: {fileID: 898131178}
+  - component: {fileID: 898131179}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -665,7 +665,8 @@ MonoBehaviour:
   nameTextBox: {fileID: 284705563}
   dialogueTextBox: {fileID: 911614231}
   animator: {fileID: 996473280}
-  timePerChar: 0
+  textWriter: {fileID: 898131179}
+  timePerChar: 50
 --- !u!4 &898131177
 Transform:
   m_ObjectHideFlags: 0
@@ -693,6 +694,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 745319908}
+--- !u!114 &898131179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898131175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2bcdb0e5e5694bf39a03fcfdf3d1fb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &911614229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,11 +1260,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896006396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.13, y: -4.78, z: 0}
+  m_LocalPosition: {x: -9.15, y: -5.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1896006400
 MonoBehaviour:
@@ -1409,7 +1422,7 @@ RectTransform:
   m_Children:
   - {fileID: 996473277}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

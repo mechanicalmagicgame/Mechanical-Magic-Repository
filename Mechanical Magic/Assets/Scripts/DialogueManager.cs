@@ -5,16 +5,19 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    //Text Boxes
     public Text nameTextBox;
     public Text dialogueTextBox;
 
-    private Queue<string> sentences;
-    private bool isDialogueActive = false;
+    //Variables for dialogs
+    private Queue<string> sentences;    //Queue of sentences for dialogs
+    private bool isDialogueActive = false;  //Check wether dialog is running or not
 
     public Animator animator;
 
-    public float timePerChar;
-    private float timer;
+    [SerializeField] private TextWriter textWriter;
+
+    [Range(1,100)]public float timePerChar;
 
 
     // Start is called before the first frame update
@@ -29,16 +32,6 @@ public class DialogueManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X) && (isDialogueActive))
         {
             DisplayNextSentence();
-        }
-
-
-        if(dialogueTextBox != null)
-        {
-            timer -= Time.deltaTime;
-            if(timer <= 0)
-            {
-                timer += timePerChar;
-            }
         }
     }
 
@@ -73,7 +66,8 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
 
         //Debug.Log(sentence);
-        dialogueTextBox.text = sentence;
+        //dialogueTextBox.text = sentence;
+        textWriter.Writer(dialogueTextBox, sentence, timePerChar / 1000);
     }
 
     public void EndDialogue()
@@ -81,10 +75,5 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = false;
         //Debug.Log("End of Conversation!");
         animator.SetBool("IsOpen", false);
-    }
-
-    public void Writer(string sentence, float timePerChar)
-    {
-        
     }
 }

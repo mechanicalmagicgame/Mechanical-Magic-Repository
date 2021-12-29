@@ -11,14 +11,6 @@ public class Interactable : MonoBehaviour
     {
         if ((Vector2.Distance(gameObject.transform.position, GameManager.instance.player.position) < interactRange) && Input.GetKeyDown(KeyCode.Z))
         {
-            //Test Code
-            /*
-            Debug.Log("Interactable!");
-            if(Input.GetKeyDown(KeyCode.Z))
-            {
-                Debug.Log("You just Interacted!!");
-            }
-            */
             Interact();
         }
     }
