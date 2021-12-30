@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 847828624}
   - component: {fileID: 847828623}
   m_Layer: 0
-  m_Name: PlaceholderNPC (1)
+  m_Name: JustACircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -560,8 +560,8 @@ MonoBehaviour:
     - Hi!
     - I'm Just a circle!
     - I think my friend is looking for you.
-    - He's down there to your left. He almost looks like me. But not as good as me
-      ofcourse.
+    - He's down there to your left. He looks just like me. But not as good as me
+      ofcourse, plus he's teal.
     - Also, I heard a rumor he might just be a temp sprite. Imagine being a temp.
       I dont know how I would live if I ever found out that I was a temp.
     - Anyways, I won't hold you any longer. Go on with your journey.
@@ -664,8 +664,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameTextBox: {fileID: 284705563}
   dialogueTextBox: {fileID: 911614231}
+  isDialogueActive: 0
   animator: {fileID: 996473280}
-  textWriter: {fileID: 898131179}
   timePerChar: 50
 --- !u!4 &898131177
 Transform:
@@ -693,6 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c91eb022394644b79bdd7ac456c51a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDialogActiveGM: 0
   player: {fileID: 745319908}
 --- !u!114 &898131179
 MonoBehaviour:
@@ -1046,10 +1047,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 745319908}
   offset: {x: 0, y: 0, z: -10}
-  xDiff: 5
+  xDiff: 3.5
   yDiff: 2.5
-  smoothFactor: 80
-  camSpeed: 20
+  smoothFactor: 2.5
+  camSpeed: 10
 --- !u!1 &1872034510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,7 +1261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896006396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.15, y: -5.39, z: 0}
+  m_LocalPosition: {x: -9.08, y: -5.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -5,11 +5,14 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public float interactRange;
+    private bool isDialogActive;
+    private DialogueManager dialogueManager;
 
     // Update is called once per frame
     void Update()
     {
-        if ((Vector2.Distance(gameObject.transform.position, GameManager.instance.player.position) < interactRange) && Input.GetKeyDown(KeyCode.Z))
+        isDialogActive = FindObjectOfType<DialogueManager>().isDialogueActive;
+        if ((Vector2.Distance(gameObject.transform.position, GameManager.instance.player.position) < interactRange) && Input.GetKeyDown(KeyCode.Z) && !isDialogActive)
         {
             Interact();
         }

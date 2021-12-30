@@ -11,13 +11,17 @@ public class DialogueManager : MonoBehaviour
 
     //Variables for dialogs
     private Queue<string> sentences;    //Queue of sentences for dialogs
-    private bool isDialogueActive = false;  //Check wether dialog is running or not
+    [HideInInspector]public bool isDialogueActive = false;  //Check wether the dialog is running or not
 
+
+    //Animator reference for open/close animation
     public Animator animator;
 
-    [SerializeField] private TextWriter textWriter;
-
+    //Speed of text output
     [Range(1,100)]public float timePerChar;
+
+    //Text Writer Instance for skip dialog
+    private TextWriter.TextWriterSingle textWriterSingle;
 
 
     // Start is called before the first frame update
@@ -28,10 +32,23 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        //Next/ Continue dialoogue trigger
-        if (Input.GetKeyDown(KeyCode.X) && (isDialogueActive))
+        if (Input.GetKeyDown(KeyCode.X) && isDialogueActive)
         {
-            DisplayNextSentence();
+            if (textWriterSingle.IsActive() && textWriterSingle != null)
+            {
+                //Currently Writing
+                textWriterSingle.SkipWriting();
+            }
+            else
+            {
+                //Next/ Continue dialoogue
+                DisplayNextSentence();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            EndDialogue();
         }
     }
 
@@ -67,7 +84,7 @@ public class DialogueManager : MonoBehaviour
 
         //Debug.Log(sentence);
         //dialogueTextBox.text = sentence;
-        textWriter.Writer(dialogueTextBox, sentence, timePerChar / 1000);
+        textWriterSingle = TextWriter.AddWriter_Static(dialogueTextBox, sentence, timePerChar / 1000, true, true);
     }
 
     public void EndDialogue()

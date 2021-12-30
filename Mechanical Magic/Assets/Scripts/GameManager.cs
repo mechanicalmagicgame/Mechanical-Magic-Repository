@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public bool isDialogActiveGM;
+
     private void Awake()
     {
         if(instance == null)
