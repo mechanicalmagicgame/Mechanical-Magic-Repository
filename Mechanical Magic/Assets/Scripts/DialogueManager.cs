@@ -32,7 +32,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X) && isDialogueActive)
+        if ((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X)) && isDialogueActive)
         {
             if (textWriterSingle.IsActive() && textWriterSingle != null)
             {
