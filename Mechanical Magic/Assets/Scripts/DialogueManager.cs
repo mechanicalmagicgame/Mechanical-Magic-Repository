@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
     //Text Boxes
     public Text nameTextBox;
     public Text dialogueTextBox;
+    public Image image;
 
     //Variables for dialogs
     private Queue<string> sentences;    //Queue of sentences for dialogs
@@ -28,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+
     }
 
     private void Update()
@@ -56,7 +58,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         //Debug.Log("Starting Conversation With " + dialogue.name);
-
+        // image.sprite = dialogue.sprite;
         nameTextBox.text = dialogue.name;
 
         isDialogueActive = true;
