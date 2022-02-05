@@ -1120,14 +1120,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1735164876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f28f290ae28f4d24ae96faffec2989a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d687537154440a3913a9a3c7977978c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 745319908}
-  offset: {x: 0, y: 0, z: -10}
-  xDiff: 3.5
-  yDiff: 2.5
-  smoothFactor: 2.5
+  CameraTarget: {fileID: 745319908}
+  FollowDistance: 30
+  MaxFollowDistance: 100
+  MinFollowDistance: 2
+  ElevationAngle: 0
+  MaxElevationAngle: 0
+  MinElevationAngle: 0
+  OrbitalAngle: 0
+  CameraMode: 0
+  MovementSmoothing: 1
+  RotationSmoothing: 0
+  MovementSmoothingValue: 25
+  RotationSmoothingValue: 5
+  MoveSensitivity: 2
 --- !u!1 &1872034510
 GameObject:
   m_ObjectHideFlags: 0
