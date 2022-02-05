@@ -34,6 +34,7 @@ public class DialogueManager : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X)) && isDialogueActive)
         {
+            StateManager.SetState(State.Talking);
             if (textWriterSingle.IsActive() && textWriterSingle != null)
             {
                 //Currently Writing
@@ -44,7 +45,7 @@ public class DialogueManager : MonoBehaviour
                 //Next/ Continue dialoogue
                 DisplayNextSentence();
             }
-        }
+        } 
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -89,6 +90,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        StateManager.ActiveState = State.Default;
         isDialogueActive = false;
         //Debug.Log("End of Conversation!");
         animator.SetBool("IsOpen", false);
