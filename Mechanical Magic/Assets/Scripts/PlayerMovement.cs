@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(StateManager.ActiveState != State.Default) return;
         if(isSprinting)
         {
             rb.velocity = movement * movementSpeed * sprintMultiplier;
