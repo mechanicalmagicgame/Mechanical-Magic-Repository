@@ -17,7 +17,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(StateManager.ActiveState != State.Default) return;
+        if(StateManager.ActiveState != State.Default) {
+            rb.velocity *= 0;
+            return;
+        }
         MovementInput();
 
         if(Input.GetKey(KeyCode.LeftShift))  //Detect shift press
