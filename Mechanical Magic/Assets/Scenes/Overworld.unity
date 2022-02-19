@@ -1106,7 +1106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6123633252641024934, guid: 329ac68c583aff14cbb0ba33b7f65bb8, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: uhh
+      value: "\u3042\u3048\u3044\u304A\u3046\r\n\u30A2\u30A8\u30A4\u30AA\u30A6 \r\n\u91D1\u66DC\u65E5"
       objectReference: {fileID: 0}
     - target: {fileID: 6123633252641024934, guid: 329ac68c583aff14cbb0ba33b7f65bb8, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
