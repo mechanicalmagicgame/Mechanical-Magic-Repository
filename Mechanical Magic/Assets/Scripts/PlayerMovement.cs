@@ -10,7 +10,10 @@ public class PlayerMovement : MonoBehaviour
     private bool isSprinting;  //Sprint Status
 
     public Rigidbody2D rb;
-    public SpriteRenderer renderer;
+    //public SpriteRenderer renderer;
+    public Animator animator;
+
+    public char lastDir;
 
     Vector2 movement;
 
@@ -32,6 +35,11 @@ public class PlayerMovement : MonoBehaviour
         {
             isSprinting = false;  //Sprint off while shift is not pressed
         }
+
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     private void FixedUpdate()
@@ -53,5 +61,7 @@ public class PlayerMovement : MonoBehaviour
         float my = Input.GetAxisRaw("Vertical");  //Movement y
 
         movement = new Vector2(mx, my).normalized;
+
+        
     }
 }

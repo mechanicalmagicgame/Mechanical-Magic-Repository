@@ -677,6 +677,7 @@ GameObject:
   - component: {fileID: 745319902}
   - component: {fileID: 745319907}
   - component: {fileID: 745319906}
+  - component: {fileID: 745319909}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -699,6 +700,7 @@ MonoBehaviour:
   movementSpeed: 4
   sprintMultiplier: 2
   rb: {fileID: 745319904}
+  animator: {fileID: 745319909}
 --- !u!58 &745319903
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -840,6 +842,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 7.2}
   m_SizeDelta: {x: 0.8828125, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &745319909
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745319901}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f31a2c1e9100e43f29b49f702b2927fb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &898131175
 GameObject:
   m_ObjectHideFlags: 0
