@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isSprinting;  //Sprint Status
 
     public Rigidbody2D rb;
+    public SpriteRenderer renderer;
 
     Vector2 movement;
 
