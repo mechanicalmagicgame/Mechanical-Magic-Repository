@@ -248,8 +248,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: 0.3, z: 0}
-  m_LocalScale: {x: 10, y: 15, z: 1}
+  m_LocalPosition: {x: 7, y: 0.0364, z: 0}
+  m_LocalScale: {x: 10, y: 25.837276, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -697,10 +697,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34959b463a0b0465a825c2b996c10a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 4
-  sprintMultiplier: 2
+  movementSpeed: 2
+  sprintMultiplier: 1.5
   rb: {fileID: 745319904}
   animator: {fileID: 745319909}
+  lastDir: 0
 --- !u!58 &745319903
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1915,8 +1916,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872034510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 0.3, z: 0}
-  m_LocalScale: {x: 10, y: 15, z: 1}
+  m_LocalPosition: {x: -7, y: 0.0393, z: 0}
+  m_LocalScale: {x: 10, y: 25.87914, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
