@@ -59,6 +59,14 @@ public class PlayerMovement : MonoBehaviour
     {
         float mx = Input.GetAxisRaw("Horizontal");  //Movement x
         float my = Input.GetAxisRaw("Vertical");  //Movement y
+        if (my > 0)
+            animator.SetFloat("LastDirection", 0);
+        else if (my < 0)
+            animator.SetFloat("LastDirection", 1);
+        else if (mx > 0)
+            animator.SetFloat("LastDirection", 3);
+        else if (mx < 0)
+            animator.SetFloat("LastDirection", 2);
 
         movement = new Vector2(mx, my).normalized;
 
