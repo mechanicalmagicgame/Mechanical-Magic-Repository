@@ -2061,6 +2061,10 @@ PrefabInstance:
       value: Not just a circle
       objectReference: {fileID: 0}
     - target: {fileID: 6123633252641024934, guid: 329ac68c583aff14cbb0ba33b7f65bb8, type: 3}
+      propertyPath: dialogue.sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6785ccb67400e0c4c891336b874ff449, type: 3}
+    - target: {fileID: 6123633252641024934, guid: 329ac68c583aff14cbb0ba33b7f65bb8, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
       value: a
       objectReference: {fileID: 0}
