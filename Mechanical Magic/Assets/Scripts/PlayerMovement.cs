@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     public char lastDir;
 
+
     Vector2 movement;
 
 
@@ -57,19 +58,34 @@ public class PlayerMovement : MonoBehaviour
 
     void MovementInput()
     {
+
         float mx = Input.GetAxisRaw("Horizontal");  //Movement x
         float my = Input.GetAxisRaw("Vertical");  //Movement y
-        if (my > 0)
-            animator.SetFloat("LastDirection", 0);
-        else if (my < 0)
-            animator.SetFloat("LastDirection", 1);
-        else if (mx > 0)
-            animator.SetFloat("LastDirection", 3);
-        else if (mx < 0)
-            animator.SetFloat("LastDirection", 2);
+        
 
         movement = new Vector2(mx, my).normalized;
 
+        mx = movement.x;
+        my = movement.y;
+
+            if (my > 0 && mx == 0)
+                animator.SetFloat("LastDirection", 0); // Up
+            else if (my < 0 && mx == 0)
+                animator.SetFloat("LastDirection", 1); // Down
+            else if (mx > 0 && my == 0)
+                animator.SetFloat("LastDirection", 3); //Left
+            else if (mx < 0 && my == 0)
+                animator.SetFloat("LastDirection", 2); //Right
+            else if (my < 0 && mx > 0)
+                animator.SetFloat("LastDirection", 4); // Down Left
+            else if (my < 0 && mx < 0)
+                animator.SetFloat("LastDirection", 5); // Down Right
+            else if (my > 0 && mx > 0)
+                animator.SetFloat("LastDirection", 6); //Up Left
+            else if (my > 0 && mx < 0)
+                animator.SetFloat("LastDirection", 7); // Up Right
+
+            Debug.Log(mx + " " + my);
         
     }
 }
