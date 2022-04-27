@@ -1,5 +1,5 @@
 public enum State {
-    Talking, Default, BananaPeeling
+    Talking, Default, BananaPeeling, Pause
 }
 
 public static class StateManager {
