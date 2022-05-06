@@ -13,12 +13,13 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Debug.Log(StateManager.GetState());
             if(isGamePaused)
             {
                 StateManager.SetState(State.Default);
                 Resume();
             }
-            else
+            else if(StateManager.GetState() != State.Talking)
             {
                 StateManager.SetState(State.Pause);
                 Pause();

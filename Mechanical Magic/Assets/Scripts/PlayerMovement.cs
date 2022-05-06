@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
             else if (my > 0 && mx < 0)
                 animator.SetFloat("LastDirection", 7); // Up Right
 
-            Debug.Log(mx + " " + my);
+            //Debug.Log(mx + " " + my);
         
     }
 }
