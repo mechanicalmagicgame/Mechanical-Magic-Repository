@@ -11,8 +11,8 @@ public class Interactable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isDialogActive = FindObjectOfType<DialogueManager>().isDialogueActive;
-        if ((Vector2.Distance(gameObject.transform.position, GameManager.instance.player.position) < interactRange) && Input.GetKeyDown(KeyCode.Z) && !isDialogActive)
+        // isDialogActive = FindObjectOfType<DialogueManager>().isDialogueActive;
+        if ((Vector2.Distance(gameObject.transform.position, GameManager.instance.player.position) < interactRange) && Input.GetKeyDown(KeyCode.Z) && (StateManager.GetState() == State.Default))
         {
             Interact();
         }
