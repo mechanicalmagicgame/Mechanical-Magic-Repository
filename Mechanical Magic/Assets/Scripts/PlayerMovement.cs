@@ -69,9 +69,9 @@ public class PlayerMovement : MonoBehaviour
         my = movement.y;
 
             if (my > 0 && mx == 0)
-                animator.SetFloat("LastDirection", 0); // Up
-            else if (my < 0 && mx == 0)
                 animator.SetFloat("LastDirection", 1); // Down
+            else if (my < 0 && mx == 0)
+                animator.SetFloat("LastDirection", 0); // Up
             else if (mx > 0 && my == 0)
                 animator.SetFloat("LastDirection", 3); //Left
             else if (mx < 0 && my == 0)

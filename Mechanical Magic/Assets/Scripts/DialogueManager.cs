@@ -49,10 +49,10 @@ public class DialogueManager : MonoBehaviour
             }
         } 
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            EndDialogue();
-        }
+        // if (Input.GetKeyDown(KeyCode.Escape))
+        // {
+        //     EndDialogue();
+        // }
     }
 
     public void StartDialogue(Dialogue dialogue)

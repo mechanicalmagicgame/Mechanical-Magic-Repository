@@ -16,10 +16,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //private void Update()
-    //{
-    //    Debug.Log(StateManager.GetState());
-    //}
+    // private void Update()
+    // {
+    //    if(StateManager.GetState() == State.Pause){
+    //        Debug.Log(StateManager.GetState());
+    //    }
+    // }
 
     public Transform player;
 }
