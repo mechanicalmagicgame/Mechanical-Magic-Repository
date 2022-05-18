@@ -58,7 +58,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         //Debug.Log("Starting Conversation With " + dialogue.name);
-        // image.sprite = dialogue.sprite;
+        image.sprite = dialogue.sprite;
         nameTextBox.text = dialogue.name;
 
         isDialogueActive = true;
