@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public static bool isGamePaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject optionsMenuUI;
 
     private State prevState = State.Default;
 
@@ -57,6 +58,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Options(){
-
+        pauseMenuUI.SetActive(false);
+        optionsMenuUI.SetActive(true);
     }
 }
